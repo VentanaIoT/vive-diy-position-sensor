@@ -84,7 +84,6 @@ Sample oscilloscope videos:
 
 | Teensy connections |  Full position tracker |
 | --- | --- |
-| ![image](https://cloud.githubusercontent.com/assets/627997/20243742/33e43b52-a919-11e6-9069-4cedc70f1c77.png) | ![image](https://cloud.githubusercontent.com/assets/627997/20243775/bca50ccc-a91a-11e6-8b45-33e086c21b3d.png) |
 
 
 
