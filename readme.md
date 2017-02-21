@@ -42,8 +42,6 @@ Each cycle, as received by sensor, has the following pulse structure:
 | 1222–6777 |        ~10 |         A or B | Laser plane sweep pulse (center=4000µs) |
 |      8333 |            |                | End of cycle |
 
-You can see all three pulses in the IR photodiode output (click for video):
-[![Lighthouse pulse structure](https://cloud.githubusercontent.com/assets/627997/20243190/0e54fc44-a902-11e6-90cd-a4edf2464e7e.png)](https://youtu.be/7OFeN3gl3SQ)
 
 The sync pulse lengths encode which of the 4 cycles we're receiving and station id/calibration data
 (see [description](https://github.com/nairol/LighthouseRedox/blob/master/docs/Light%20Emissions.md)).
