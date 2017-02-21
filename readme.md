@@ -1,19 +1,7 @@
 #[Original Readme](https://github.com/VentanaIoT/vive-diy-position-sensor/blob/master/docs/readme.md)
 
 # DIY Position Tracking using HTC Vive's Lighthouse
- * General purpose indoor positioning sensor, good for robots, drones, etc.
- * 3d position accuracy: currently ~10mm; less than 2mm possible with additional work.
- * Update frequency: 30 Hz
- * Output formats: Text; Mavlink ATT_POS_MOCAP via serial; Ublox GPS emulation (in works)
- * HTC Vive Station visibility requirements: full top hemisphere from sensor. Both stations need to be visible.
- * Positioning volume: same as HTC Vive, approx up to 4x4x3 meters.
- * Cost: ~$10 + [Teensy 3.2 ($20)](https://www.pjrc.com/store/teensy32.html) (+ [Lighthouse stations (2x $135)](http://www.vive.com/us/accessory/base-station/))
- * Skills to build: Low complexity soldering; Embedded C++ recommended for integration to your project.
- * License: MIT
 
-| ![image](https://cloud.githubusercontent.com/assets/627997/19845384/a4fce0e4-9ef3-11e6-95e4-6567ff374ee0.png) | ![image](https://cloud.githubusercontent.com/assets/627997/19846322/79e76980-9efb-11e6-932e-7730e75dc5f1.png) |
-| --- | --- |
-| Demo showing raw XYZ position: [![image](https://cloud.githubusercontent.com/assets/627997/19845646/efc3cb18-9ef5-11e6-9902-58fe30e68a12.png)](https://www.youtube.com/watch?v=Xzuns5UYP8M) | Indoor hold position for a drone: [![image](https://cloud.githubusercontent.com/assets/627997/19845426/06c64bb2-9ef4-11e6-8d2b-1bbfbc5ec368.png)](https://www.youtube.com/watch?v=7GgB5qnx6_s) |
 
 ## How it works
 Lighthouse position tracking system consists of:  
