@@ -1,3 +1,5 @@
+#[Original Readme](https://github.com/VentanaIoT/vive-diy-position-sensor/blob/master/docs/readme.md)
+
 # DIY Position Tracking using HTC Vive's Lighthouse
  * General purpose indoor positioning sensor, good for robots, drones, etc.
  * 3d position accuracy: currently ~10mm; less than 2mm possible with additional work.
