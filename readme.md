@@ -48,23 +48,6 @@ You can see all three pulses in the IR photodiode output (click for video):
 The sync pulse lengths encode which of the 4 cycles we're receiving and station id/calibration data
 (see [description](https://github.com/nairol/LighthouseRedox/blob/master/docs/Light%20Emissions.md)).
 
-## Hardware
-Complete tracking module consists of two parts:
- * IR Sensor and amplifier (custom board)
- * Timing & processing module (we use Teensy 3.2)
-
-### IR Sensor
-To detect the infrared pulses, of course we need an IR sensor. After a couple of attempts, I ended up using 
-[BPV22NF](http://www.vishay.com/docs/81509/bpv22nf.pdf) photodiodes. Main reasons are:
- * Optical IR filter 790-1050nm, which excludes most of sunlight, but includes the 850nm stations use.
- * High sensitivity and speed
- * Wide 120 degree field of view
-
-To get the whole top hemisphere FOV we need to place 3 photodiodes in 120deg formation in horizontal plane, then tilt each one
-30deg in vertical plane. I used a small 3d-printed part, but it's not required. 
-
-![image](https://cloud.githubusercontent.com/assets/627997/20243300/cf9b5e3a-a906-11e6-9137-3b0653bf694b.png)
-![image](https://cloud.githubusercontent.com/assets/627997/20243325/b84964e2-a907-11e6-92bf-8b15d8c5cbd1.png)
 
 ### Sensor board
 
@@ -79,7 +62,6 @@ Full schematics:
 
 | Top view | Bottom view |
 | --- | --- |
-| ![image](https://cloud.githubusercontent.com/assets/627997/20243575/291a2f7a-a913-11e6-9cd9-a152f66b2817.png) | ![image](https://cloud.githubusercontent.com/assets/627997/20243577/3d91bcb6-a913-11e6-9c58-30caf060dbc3.png) |
 
 Part list (add to cart [from here](1-click-bom.tsv) using [1-click BOM](https://1clickbom.com)):
 
@@ -99,9 +81,6 @@ Sample oscilloscope videos:
 
 | Point | Video |
 | --- | --- |
-| After transimpedance amplifier: we've got a good signal, but notice how base level changes depending on background illumination (click for video) | [![first point](https://cloud.githubusercontent.com/assets/627997/20243649/83a717b2-a915-11e6-84d1-a4891baa33af.png)](https://youtu.be/PJGA8cOJhnc) |
-| After high-pass filter: no more base level changes, but we see signal deformation | [![second point](https://cloud.githubusercontent.com/assets/627997/20243653/f532f6e4-a915-11e6-893a-b5964603dbc8.png)](https://youtu.be/ra8TT-KtqN0) |
-| Sensor board output: 0-5v saturated signal | [![output](https://cloud.githubusercontent.com/assets/627997/20243669/b17aa0d6-a916-11e6-9f0a-7f499eebad14.png)](https://youtu.be/MdnZcimQteY)
 
 ### Teensy connection
 
@@ -109,7 +88,6 @@ Sample oscilloscope videos:
 | --- | --- |
 | ![image](https://cloud.githubusercontent.com/assets/627997/20243742/33e43b52-a919-11e6-9069-4cedc70f1c77.png) | ![image](https://cloud.githubusercontent.com/assets/627997/20243775/bca50ccc-a91a-11e6-8b45-33e086c21b3d.png) |
 
-Note: Teensy's RX1/TX1 UART interface can be used to output position instead of USB. 
 
 
 ## Software (Teensy)
