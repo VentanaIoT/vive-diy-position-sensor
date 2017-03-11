@@ -10,7 +10,7 @@ The objective of the project is to provide a mechanism for tracking physical obj
 ## Setup
 
 
-We aim to achieve our goal by basing this project on the [https://github.com/ashtuchkin/vive-diy-position-sensor](Vive DIY Position Sensor Project) repository on GitHub. In this open sourced project, the HTC Vive base stations are used for positional tracking combined with a DIY tracker circuit. This circuit interprets the IR signals emitted by the base stations and converts it into a (X,Y,Z,Distance) coordinate relative to the tracker’s location between the base stations.
+We aim to achieve our goal by basing this project on the [[Vive DIY Position Sensor Project](https://github.com/ashtuchkin/vive-diy-position-sensor) repository on GitHub. In this open sourced project, the HTC Vive base stations are used for positional tracking combined with a DIY tracker circuit. This circuit interprets the IR signals emitted by the base stations and converts it into a (X,Y,Z,Distance) coordinate relative to the tracker’s location between the base stations.
 
 
 ### Hardware
@@ -74,7 +74,7 @@ Our testing determined that the HoloLens interfered with tracker’s ability to 
 
 
 ### Measurements
-While we don’t have usable rotation matrices yet, we decided to take some values of our setup to make sure they were consistent. They can all be found [https://github.com/VentanaIoT/vive-diy-position-sensor/tree/master/files/Measurements%20and%20plots](here)
+While we don’t have usable rotation matrices yet, we decided to take some values of our setup to make sure they were consistent. They can all be found [here](https://github.com/VentanaIoT/vive-diy-position-sensor/tree/master/files/Measurements%20and%20plots)
 ## Next Steps
 
 
@@ -88,7 +88,7 @@ The first is to expand our current hardware module to have multiple sensors inst
 The second possibility is to layer virtual lighthouses over the physical ones and then use the HoloLens spatial map to do the calculation of where they are in relation to each other. This is the harder, but also most favorable possibility as this technique will also allow us to do other pieces of the calibration process in the same step and layer the coordinate systems over each other.
 
 
-This brings us to the rotational matrix, the second part of the calibration process. This is the place where we will be doing a lot of work because other projects assume the user has vive to do this calibration. Essentially the rotational matrix indicates how the lighthouses are rotated in space. More details can be found [https://github.com/VentanaIoT/vive-diy-position-sensor/blob/master/files/Rotational%20Matrix.pdf](Here)
+This brings us to the rotational matrix, the second part of the calibration process. This is the place where we will be doing a lot of work because other projects assume the user has vive to do this calibration. Essentially the rotational matrix indicates how the lighthouses are rotated in space. More details can be found [here](https://github.com/VentanaIoT/vive-diy-position-sensor/blob/master/files/Rotational%20Matrix.pdf)
 
 
 ## Challenges
@@ -96,7 +96,7 @@ This brings us to the rotational matrix, the second part of the calibration proc
 Along with calibration, we need a method for overlapping the Hololens coordinate system with the tracker’s coordinate system. This is integral to our project because without it, we cannot match location in one coordinate system with another.
 
 
-We found a project that does a similar type of overlay [https://github.com/dag10/HoloViveObserver](HoloViveObserver) and uses the vive controller to set a common point for both the Vive and the Hololens. We are looking to do the same thing but instead of using the controller to set our common point we are going to use place virtual models of the HTC Vive Lighthouses on top of the real ones to set our common points that we can then translate into the HoloLens coordinate system
+We found a project that does a similar type of overlay [HoloViveObserver](https://github.com/dag10/HoloViveObserver) and uses the vive controller to set a common point for both the Vive and the Hololens. We are looking to do the same thing but instead of using the controller to set our common point we are going to use place virtual models of the HTC Vive Lighthouses on top of the real ones to set our common points that we can then translate into the HoloLens coordinate system
 
 
 ### Adding wireless to teensy
