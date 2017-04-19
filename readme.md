@@ -104,3 +104,16 @@ The position calculation that our teensy does needs to be transferred wirelessly
 
 
 We can add different wireless technologies to our Teensy to achieve this including Bluetooth, Wi-Fi, or one of the IoT specific standards like ZigBee or Z-Wave
+
+##Update 4/18
+### Finding Position Data
+The biggest part of this sprint was finally getting position data from our sensor. There is an example of this happening at files/IMG_0130.MOV.mov. This is the biggest step of the project as it involved understanding and being able to recreate the rotation matricies that a Vive uses calibrate the system.
+
+### Adding bluetooth for wireless communication to the HoloHub (Raspberry Pi server)
+As part of the goal for the project we need to wirelessly transmit data from the Teensy to the HoloHub server. This involved adding a bluetooth module to the Teensy as well as changing the serial port to go directly to bluetooth instead of the USB connection.
+
+### Adding HoloLens compatability to the circuit
+In earlier tests we didn't use the HoloLens in the setup to create a consistent environment. In this sprint we added a hardware low-pass filter to the circuit to ignore the super-high frequency IR blasts that the HoloLens uses to map a room.
+
+### Next challenges
+Adding an interface on the HoloHub to accept in real time the position data and then send it to the Hololens.
