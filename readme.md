@@ -105,7 +105,7 @@ The position calculation that our teensy does needs to be transferred wirelessly
 
 We can add different wireless technologies to our Teensy to achieve this including Bluetooth, Wi-Fi, or one of the IoT specific standards like ZigBee or Z-Wave
 
-##Update 4/18
+## Update 4/18
 ### Finding Position Data
 The biggest part of this sprint was finally getting position data from our sensor. There is an example of this happening at files/IMG_0130.MOV.mov. This is the biggest step of the project as it involved understanding and being able to recreate the rotation matricies that a Vive uses calibrate the system.
 
